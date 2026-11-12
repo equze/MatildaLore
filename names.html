@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101214">
+  <title>Matilda Lore — История имён</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="names-theme.css">
+</head>
+<body>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <header class="masthead site-shell">
+    <a class="wordmark" href="index.html">Matilda Lore</a>
+    <a class="issue back-link" href="index.html#games-section">← ВСЕ ИГРЫ</a>
+  </header>
+  <main id="top">
+    <section class="intro">
+      <p class="eyebrow">ИНТЕРАКТИВНЫЙ АРХИВ ЛИЧНОЙ МИФОЛОГИИ</p>
+      <h1>Собери <em>историю</em><br>по именам</h1>
+      <p class="lede">Ники менялись. Порядок остался в архиве. Перетащи карточки, чтобы восстановить последовательность — от самого раннего имени к последнему.</p>
+      <div class="meta-row"><span>01 — ИМЕНА</span><span id="countLabel">— карточек</span><span>ВВЕРХУ — РАНЬШЕ</span></div>
+    </section>
+
+    <section class="game" aria-labelledby="gameTitle">
+      <div class="game-heading"><div><p class="eyebrow">ХРОНОЛОГИЯ / 001</p><h2 id="gameTitle">Расставь по времени</h2></div><button id="shuffleBtn" class="text-button" type="button">↻ Перемешать</button></div>
+      <p class="hint">Потяни карточку за ручку и отпусти между другими. Они уступят место. Вверху — самое раннее имя.</p>
+      <ol id="nicknameList" class="nickname-list" aria-label="Перемешанные никнеймы"></ol>
+      <div class="game-footer"><p id="feedback" class="feedback" aria-live="polite">Выстрой от раннего ника к позднему.</p><button id="checkBtn" class="primary-button" type="button">Проверить порядок</button></div>
+    </section>
+    <footer><span>MATILDALORE</span><span>СОБРАНО ИЗ ЛИЧНОГО АРХИВА</span><span>© 2026</span></footer>
+  </main>
+  <div class="result-overlay" id="resultOverlay" aria-hidden="true"><section class="result-dialog" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><p class="eyebrow">ИТОГ РАУНДА</p><h2 id="resultTitle">Хронология проверена</h2><p class="result-score" id="resultScore"></p><p class="result-copy" id="resultCopy"></p><div class="result-actions"><button id="restartBtn" class="primary-button" type="button">Заново</button><a class="secondary-button" href="index.html">В меню</a></div></section></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
