@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111315">
+  <meta name="description" content="Matilda Lore — цифровая коллекция событий, персонажей, переписок и материалов о мире Матильды.">
+  <title>Matilda Lore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="story-format.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="noise-layer" aria-hidden="true"></div>
+  <div class="site-shell" id="top">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Matilda Lore, главная" id="home-link">
+        <span class="brand-name">Matilda Lore</span>
+        <span class="brand-subtitle">LORE OF MATILDA</span>
+      </a>
+
+      <div class="menu-wrap">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+          <span>МЕНЮ</span>
+        </button>
+        <nav class="site-menu" id="site-menu" aria-label="Главное меню" hidden>
+          <p class="menu-heading">Лор Матильды</p>
+          <p class="menu-caption">РАЗДЕЛЫ</p>
+          <a class="menu-item active" href="#stories-section" id="stories-menu-link">Истории</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="archive-view" id="archive-view">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">MATILDA LORE / DIGITAL ARCHIVE</p>
+            <h1>Лор<br><em>Матильды.</em></h1>
+            <p class="hero-description">Пространство лора Матильды: истории, переписки, персонажи, события, места и другие связанные материалы.</p>
+            <a class="hero-link" href="#stories-section">ПЕРЕЙТИ К ИСТОРИЯМ</a>
+          </div>
+          <div class="hero-aside" aria-label="Информация о коллекции">
+            <div class="aside-ornament" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="aside-rule"></div>
+            <p class="aside-label">КОЛЛЕКЦИЯ № 001</p>
+            <p class="aside-note">Истории,<br>персонажи и события.</p>
+            <p class="aside-coordinates">TXT · UTF-8 · 2026</p>
+          </div>
+          <div class="hero-index">VOL. 01 <span>EST. 2026</span></div>
+        </section>
+
+        <section class="archive-section" id="stories-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">РАЗДЕЛ 01 / ПЕРВЫЙ РАЗДЕЛ</p>
+              <h2>Истории</h2>
+              <p class="section-description">Внутри раздела собраны отдельные истории и переписки Матильды. Каждая запись открывается как самостоятельный материал.</p>
+            </div>
+            <p class="section-count"><span id="story-count">01</span> ИСТОРИЙ В РАЗДЕЛЕ</p>
+          </div>
+
+          <div class="collection-toolbar">
+            <label for="sort-stories">СОРТИРОВАТЬ</label>
+            <select id="sort-stories" class="sort-select">
+              <option value="date-desc">Дата события / переписки: сначала новые</option>
+              <option value="date-asc">Дата события / переписки: сначала старые</option>
+              <option value="number-asc">Номер: сначала первые</option>
+              <option value="number-desc">Номер: сначала последние</option>
+            </select>
+          </div>
+
+          <div class="story-list" id="story-list">
+            <button class="story-card" type="button" data-story="exchange-info-08-11-2026" data-title="Обмен информацией" data-date="2026-11-08" data-order="1">
+              <span class="story-number">001</span>
+              <span class="story-main">
+                <span class="story-meta"><time datetime="2026-11-08">08 НОЯБРЯ 2026</time><span class="meta-divider"></span><span>ПЕРЕПИСКА</span></span>
+                <span class="story-title">Обмен информацией</span>
+                <span class="story-description">Переписка, детали и события, из которых постепенно складывается общая картина.</span>
+                <span class="read-label">ОТКРЫТЬ МАТЕРИАЛ</span>
+              </span>
+              <span class="story-status">ЗАКРЫТЫЙ МАТЕРИАЛ</span>
+            </button>
+          </div>
+
+          <div class="archive-footer">
+            <span>КОНЕЦ РАЗДЕЛА</span>
+            <span class="archive-footer-line"></span>
+            <span>ИСТОРИИ БУДУТ ДОПОЛНЯТЬСЯ</span>
+          </div>
+        </section>
+      </section>
+
+      <section class="reader-view" id="reader-view" hidden>
+        <div class="reader-toolbar">
+          <button class="back-button" id="back-to-archive" type="button">К ИСТОРИЯМ</button>
+          <span class="reader-access-label">ЗАЩИЩЁННЫЙ МАТЕРИАЛ</span>
+        </div>
+        <article class="reader-main">
+          <header class="reader-heading">
+            <p class="eyebrow">MATILDA LORE / БИБЛИОТЕКА ЛОРА</p>
+            <h1 id="reader-title">Материал</h1>
+            <div class="reader-heading-rule"></div>
+          </header>
+          <div class="story-content" id="story-content" aria-live="polite">
+            <p class="loading-message">Загрузка материала...</p>
+          </div>
+          <footer class="reader-footer">
+            <span class="reader-endmark" aria-hidden="true"></span>
+            <p>КОНЕЦ МАТЕРИАЛА</p>
+            <button class="back-button footer-back" id="footer-back-to-archive" type="button">ВЕРНУТЬСЯ К ИСТОРИЯМ</button>
+          </footer>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+      <span>© MATILDA LORE 2026</span>
+      <span>ХРОНИКА ЛОРА МАТИЛЬДЫ</span>
+      <a href="#top" id="top-link">В НАЧАЛО</a>
+    </footer>
+  </div>
+
+  <dialog class="password-dialog" id="password-dialog" aria-labelledby="dialog-title">
+    <form method="dialog" class="dialog-close-form">
+      <button class="dialog-close" aria-label="Закрыть окно" value="cancel">×</button>
+    </form>
+    <p class="eyebrow dialog-eyebrow">MATILDA LORE / ENTRY 001</p>
+    <h2 id="dialog-title">Этот материал<br><em>защищён.</em></h2>
+    <p class="dialog-description">Введите пароль, чтобы открыть материал из коллекции Матильды.</p>
+    <form id="password-form" class="password-form">
+      <label for="password-input">ПАРОЛЬ ДОСТУПА</label>
+      <input id="password-input" name="password" type="password" autocomplete="off" placeholder="Введите пароль" maxlength="64" required>
+      <p class="password-error" id="password-error" role="alert" aria-live="polite"></p>
+      <button class="dialog-submit" type="submit">ПРОВЕРИТЬ ПАРОЛЬ</button>
+    </form>
+    <p class="dialog-footnote">ДОСТУП К МАТЕРИАЛУ № 001</p>
+  </dialog>
+</body>
+</html>
